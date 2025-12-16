@@ -1687,3 +1687,12 @@ class Bullex:
         except Exception as e:
             logging.warning(f"Não foi possível obter payout para {active}: {e}")
         return 85  # valor padrão se não conseguir
+
+    def close(self):
+        """
+        Fecha a conexão WebSocket com a API Bullex.
+        """
+        try:
+            self.api.close()
+        except Exception as e:
+            logging.error(f"Erro ao fechar conexão: {e}")

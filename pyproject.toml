@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "bullexapi"
+version = "0.1.0"
+description = "Wrapper Python para Bullex API"
+authors = ["L0k1 <brunofsjob@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/brunofsjob/bullexapi"
+repository = "https://github.com/brunofsjob/bullexapi"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+packages = [{include = "bullexapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+websocket-client = "1.8.0"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
